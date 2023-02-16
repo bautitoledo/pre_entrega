@@ -1,0 +1,26 @@
+{% extends "padre.html" %}
+{% load static %}
+
+
+
+{% block contenido00 %}
+    <h2 class="mx-auto my-5 text-uppercase"> SECCIÓN PRODUCTOS</h2>
+    <h4 class="text-white-50 mx-auto mt-2 mb-5"> Te mostramos algunos de nuestros diseños, confeccionados artesalmente.</h4>
+                                                
+{% endblock %} 
+{% block contenido%}
+<h2 class="text-white mb-4">NUESTROS PRODUCTOS</h2>
+    <p class="text-white-50">
+       Diseñados exclusivamente a pedido de nuestros clientes
+       <h2> Calidad y excelencia </h2> 
+        Les aseguramos diseños únicos.
+        Por favor, complete el siguiente formulario:
+    </p>
+    <h2 class="text-white mb-4"> <form action="{% url 'producto' %}" method="POST"> {% csrf_token %}</h2>
+        <table>
+            {{ form.as_table}}
+        </table>
+    <input type="submit" value="Enviar información sobre producto"
+
+{{ mensaje1 }}  
+{% endblock %}

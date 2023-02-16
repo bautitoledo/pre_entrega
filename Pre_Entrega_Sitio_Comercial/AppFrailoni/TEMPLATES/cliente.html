@@ -1,0 +1,26 @@
+{% extends "padre.html" %}
+{% load static %}
+
+
+
+
+{% block contenido00 %}
+    <h2 class="mx-auto my-5 text-uppercase"> SECCIÓN CLIENTES</h2>
+    <h4 class="text-white-50 mx-auto mt-2 mb-5"> Productos únicos solicitados por nuestros clientes </h4>
+
+{% endblock %}
+
+
+{% block contenido%}
+<h2 class="text-white mb-4">NUESTROS CLIENTES</h2>
+    <p class="text-white-50"> Diseñados exclusivamente a pedido de ustedes mismos</p>
+       <h2> Complete el formulario y nosotros nos encargamos de lo demás... </h2> 
+           
+       <h2 class="text-white mb-4"> <form action="{% url 'cliente' %}" method="POST"> {% csrf_token %}</h2>
+            <table>
+                {{ form.as_table}}
+            </table>
+        <input type="submit" value="Enviar información" 
+
+{{ mensaje }}  
+{% endblock %}

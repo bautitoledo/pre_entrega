@@ -1,0 +1,24 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido00 %}
+
+<h5 class="mb-10"> Resultados de la busqueda de precios:</h5>
+
+{% if precio %}
+
+<h2>Listado de precios:</h2>
+
+{% for precios in precio%}
+{{producto.precio}}
+
+{% endfor%}
+
+{% else %}
+
+<h2> NO HAY PRECIOS </h2>
+
+{% endif%}
+
+{% endblock %}

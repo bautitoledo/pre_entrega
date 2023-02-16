@@ -1,0 +1,27 @@
+{% extends "padre.html" %}
+{% load static %}
+
+
+{% block contenido00 %}
+    <h2 class="mx-auto my-5 text-uppercase"> SECCIÓN PROVEEDORES</h2>
+    <h4 class="text-white-50 mx-auto mt-2 mb-5"> Si querés sumarte como nuestro proveedor, por favor dejanos un mensaje.</h4>
+                                                
+{% endblock %} 
+
+{% block contenido%}
+<h2 class="text-white mb-4">NUESTROS PROVEEDORES</h2>
+    <p class="text-white-50">
+       Productos elaborados con 100% de recursos biodegradables, extraidos de manera responsable.
+        <h2> ¡Al cuidado de nuestro medioambiente! </h2> 
+        
+    </p>
+
+    <h2 class="text-white mb-4"> <form action="{% url 'proveedores' %}" method="POST"> {% csrf_token %}</h2>
+        <table>
+            {{ form.as_table}}
+        </table>
+    <input type="submit" value="Enviar información" 
+
+{{ mensaje }}
+
+{% endblock %}
